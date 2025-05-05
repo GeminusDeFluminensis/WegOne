@@ -98,7 +98,7 @@ public class Principal {
 
 			default:
 
-				System.out.println(traducao.getProperty("invalido"));
+				System.out.println(traducao.getProperty("numeroInvalido"));
 				break;
 			}
 
@@ -124,7 +124,7 @@ public class Principal {
 				input.nextLine();
 
 				if(escolhaTipoTexto > 5 || escolhaTipoTexto < 1){
-					System.out.println(traducao.getProperty("invalido"));
+					System.out.println(traducao.getProperty("numeroInvalido"));
 				}
 			}while(escolhaTipoTexto > 5 || escolhaTipoTexto < 1);
 
@@ -163,7 +163,7 @@ public class Principal {
 				}
 
 				if(!repeticaoCadastro.equalsIgnoreCase(traducao.getProperty("positivo")) && !repeticaoCadastro.equalsIgnoreCase(traducao.getProperty("negativo"))){
-					System.out.println("Resposta inválida");
+					System.out.println(traducao.getProperty("respostaInvalida"));
 				}
 
 			}while(!repeticaoCadastro.equalsIgnoreCase(traducao.getProperty("positivo")) && !repeticaoCadastro.equalsIgnoreCase(traducao.getProperty("negativo")));

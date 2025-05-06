@@ -57,7 +57,6 @@ public class Principal {
 
 		}
 		Tradutor traducao = Tradutor.getInstance(idioma);
-
 		String tipoTexto[] = {"Manual de operação", "Procedimentos de segurança", "Manutenção e reparos", "Testes e diagnósticos", "Manual de conduta e Operações Setoriais"};
 		String opcoesMenu[] = {"Cadastrar Orientação", "Pesquisar Orientação", "Editar Orientação", "Excluir Orientação", "Sair"};
 		int escolhaNumero;

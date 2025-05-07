@@ -89,8 +89,78 @@ public class Principal {
 
 				excluirOrientacao(input);
 				break;
-
 			case 5:
+            System.out.println(traducao.getProperty("tipoOrientacao"));
+            int selecao = input.nextInt();
+            if (selecao==1){
+				System.out.print("1-");
+                     System.out.println(traducao.getProperty("mo1Titulo"));
+					 System.out.print("2-");
+                    System.out.println(traducao.getProperty("mo2Titulo"));
+                    selecao = input.nextInt();
+                    if (selecao==1){
+                        System.out.println(traducao.getProperty("mo1Conteudo"));
+                    }
+					else if (selecao==2){
+						System.out.println(traducao.getProperty("mo2Conteudo"));
+					}
+            }
+			else if(selecao==2){
+				System.out.print("1-");
+					System.out.println(traducao.getProperty("ps1Titulo"));
+					System.out.print("2-");
+                    System.out.println(traducao.getProperty("ps2Titulo"));
+                    selecao = input.nextInt();
+                    if (selecao==1){
+                       System.out.println(traducao.getProperty("ps1Conteudo"));
+                    }
+					else if (selecao==2){
+						System.out.println(traducao.getProperty("ps2Conteudo"));
+					}
+			}
+			else if(selecao==3){
+				System.out.print("1-");
+					System.out.println(traducao.getProperty("mr1Titulo"));
+					System.out.print("2-");
+                    System.out.println(traducao.getProperty("mr2Titulo"));
+                    selecao = input.nextInt();
+                    if (selecao==1){
+                        System.out.println(traducao.getProperty("mr1Conteudo"));
+                    }
+					else if (selecao==2){
+						System.out.println(traducao.getProperty("mr2Conteudo"));
+					}
+			}
+			else if(selecao==4){
+				System.out.print("1-");
+					System.out.println(traducao.getProperty("td1Titulo"));
+					System.out.print("2-");
+                    System.out.println(traducao.getProperty("td2Titulo"));
+                    selecao = input.nextInt();
+                    if (selecao==1){
+                       System.out.println(traducao.getProperty("td1Conteudo"));
+                    }
+					else if (selecao==2){
+						System.out.println(traducao.getProperty("td2Conteudo"));
+					}
+			}
+			else if(selecao==5){
+					System.out.print("1-");
+					System.out.println(traducao.getProperty("mcos1Titulo"));
+					System.out.print("2-");
+                    System.out.println(traducao.getProperty("mcos2Titulo"));
+                    selecao = input.nextInt();
+                    if (selecao==1){
+                        System.out.println(traducao.getProperty("mcos1Conteudo"));
+                    }
+					else if (selecao==2){
+						System.out.println(traducao.getProperty("mcos2Conteudo"));
+					}
+			}
+				
+
+				break;
+			case 6:
 
 				System.out.println(traducao.getProperty("encerramento"));
 				break;

@@ -60,8 +60,10 @@ public class Principal {
 		String tipoTexto[] = {"Manual de operação", "Procedimentos de segurança", "Manutenção e reparos", "Testes e diagnósticos", "Manual de conduta e Operações Setoriais"};
 		String opcoesMenu[] = {"Cadastrar Orientação", "Pesquisar Orientação", "Editar Orientação", "Excluir Orientação", "Sair"};
 		int escolhaNumero;
-
+		int selecao = 0;
 		do {
+			
+				
 			// Exibe o menu principal
 			System.out.println(traducao.getProperty("menu"));
 
@@ -90,8 +92,9 @@ public class Principal {
 				excluirOrientacao(input);
 				break;
 			case 5:
+			do{
             System.out.println(traducao.getProperty("tipoOrientacao"));
-            int selecao = input.nextInt();
+        	selecao = input.nextInt();
             if (selecao==1){
 				System.out.print("1-");
                      System.out.println(traducao.getProperty("mo1Titulo"));
@@ -103,6 +106,9 @@ public class Principal {
                     }
 					else if (selecao==2){
 						System.out.println(traducao.getProperty("mo2Conteudo"));
+					}else {
+						System.out.println("Numero inválido");
+						break;
 					}
             }
 			else if(selecao==2){
@@ -116,6 +122,9 @@ public class Principal {
                     }
 					else if (selecao==2){
 						System.out.println(traducao.getProperty("ps2Conteudo"));
+					}else {
+						System.out.println("Numero inválido");
+						break;
 					}
 			}
 			else if(selecao==3){
@@ -129,6 +138,9 @@ public class Principal {
                     }
 					else if (selecao==2){
 						System.out.println(traducao.getProperty("mr2Conteudo"));
+					}else {
+						System.out.println("Numero inválido");
+						break;
 					}
 			}
 			else if(selecao==4){
@@ -142,6 +154,9 @@ public class Principal {
                     }
 					else if (selecao==2){
 						System.out.println(traducao.getProperty("td2Conteudo"));
+					}else {
+						System.out.println("Numero inválido");
+						break;
 					}
 			}
 			else if(selecao==5){
@@ -155,24 +170,27 @@ public class Principal {
                     }
 					else if (selecao==2){
 						System.out.println(traducao.getProperty("mcos2Conteudo"));
+					}else {
+						System.out.println("Numero inválido");
+						break;
 					}
 			}
-				
+			break; 
+			}while( selecao != 5);
+			break;
+				case 6:
 
-				break;
-			case 6:
+					System.out.println(traducao.getProperty("encerramento"));
+					break;
 
-				System.out.println(traducao.getProperty("encerramento"));
-				break;
+				default:
 
-			default:
+					System.out.println(traducao.getProperty("numeroInvalido"));
+					break;
+				}
 
-				System.out.println(traducao.getProperty("numeroInvalido"));
-				break;
-			}
-
-		} while (escolhaNumero != 5);
-
+		
+	}while(escolhaNumero != 6);
 	}
 
 	// Método para cadastrar uma nova orientação
